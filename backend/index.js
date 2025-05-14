@@ -36,7 +36,8 @@ app.use(cors({
       'https://blood-link-q0wm.onrender.com', 
       'http://localhost:3000', 
       'http://localhost:5173',
-      'https://blood-link.vercel.app'
+      'https://blood-link.vercel.app',
+      'https://blood-link-gamma.vercel.app'
     ];
     
     // Check if origin is in the allowed list
