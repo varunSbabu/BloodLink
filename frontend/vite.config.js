@@ -5,6 +5,7 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: './', // Ensures assets are loaded with relative paths
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -40,6 +41,9 @@ export default defineConfig({
           vendor: ['react', 'react-dom', 'react-router-dom'],
           animations: ['framer-motion', 'three'],
         },
+        assetFileNames: 'assets/[name].[hash].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js',
       },
     },
   },
