@@ -13,7 +13,7 @@ Backend API server for the BloodLink blood donation platform.
    - **Name**: bloodlink-backend (or your preferred name)
    - **Environment**: Node
    - **Build Command**: `npm install`
-   - **Start Command**: `npm start`
+   - **Start Command**: `node index.js`
 5. Add the necessary environment variables:
    - `NODE_ENV`: production
    - `PORT`: 10000 (Render assigns a port automatically, but this is the internal port)
@@ -27,6 +27,15 @@ Backend API server for the BloodLink blood donation platform.
 4. Click on the Blueprint to deploy
 5. Configure any environment variables that aren't set in the YAML file
 6. Deploy
+
+## Troubleshooting Render Deployment
+
+If you encounter the error `Cannot find module '/opt/render/project/src/backend/start.js'`:
+
+1. Make sure your **Start Command** is set to `node index.js` (NOT `npm start`)
+2. Verify that `index.js` exists in the root of your backend directory
+3. Check that the path to your backend is correct (if your backend code is in a subdirectory)
+4. If needed, create a simple `start.js` file that requires your main `index.js` file
 
 ## Required Environment Variables
 

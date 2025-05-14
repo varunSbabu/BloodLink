@@ -21,7 +21,7 @@ echo 3. Configure the following settings:
 echo    - Name: bloodlink-backend
 echo    - Environment: Node
 echo    - Build Command: npm install
-echo    - Start Command: npm start
+echo    - Start Command: node index.js
 echo 4. Add the following environment variables:
 echo    - NODE_ENV: production
 echo    - MONGODB_URI: [Your MongoDB connection string]
@@ -33,6 +33,12 @@ echo your frontend environment variables with this backend URL.
 echo.
 echo Once deployed, your API should be accessible at:
 echo https://[your-service-name].onrender.com/api/health
+
+echo.
+echo If you encounter MODULE_NOT_FOUND errors, check that:
+echo 1. Your start command is "node index.js" (not "npm start")
+echo 2. All required files exist in your repository
+echo 3. The path to your main file is correct
 
 echo.
 pause 
